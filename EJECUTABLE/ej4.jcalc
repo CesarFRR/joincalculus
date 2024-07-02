@@ -1,0 +1,47 @@
+// distribucion de tareas entre dos procesos: uno que envia numeros pares y otro que recibe los numeros pares y multiplos de 4
+// y los imprime en pantalla hasta que recibe el numero 18 o superior
+// se ha añadido un cache para evitar imprimir numeros repetidos
+
+
+channel A;
+int cache = -1;
+int size = 20;
+process P {
+    for (int i = 0; i < size; i = i + 1) {
+        int result = i ;
+        if (result % 2 == 0) {
+            //println("El numero i es " + result + ", que es un número par");
+            send A(i);
+        } else {
+            //println("El numero i es " + result + ", que es un número impar");
+        }
+    }
+    stop();
+}
+
+
+process Preceiver{
+    int result = -1;
+    if (!isEmpty(A)) {
+        result = receive A();
+    }
+    if (result != cache) {
+        cache = result;
+        if( (result % 4) == 0){
+            println("El numero i es " + result + ", que es multiplo de 4");
+
+        }
+    }
+    if (result >= 18) {
+        stop();
+    }
+}
+
+Preceiver.run();
+P.run();
+wait(2000);
+println("Fin del programa, para los numeros:");
+for (int i = 0; i < size; i = i + 1) {
+        print(i + " ");
+}
+println("");

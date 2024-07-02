@@ -14,7 +14,6 @@ sent : declar ';'
           | print';'
           | channel_decl ';'
           | channel_send ';'
-//          | channel_receive ';'
           | process_decl
           | process_run ';'
           | process_stop ';'
@@ -23,8 +22,6 @@ sent : declar ';'
           | sent_while
           | sent_break ';'
           | sent_continue ';'
-
-          // añadir otras reglas según las necesidades del lenguaje
           ;
 
 print: 'print' '(' expr ')';
@@ -71,7 +68,6 @@ expr
      | expr '||' expr #orBool
      | expr '&&' expr #andBool
      | '(' expr ')'    #innerExpr
-     // definir otras operaciones que soporte tu lenguaje
      ;
 
 operators_bool:

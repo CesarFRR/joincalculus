@@ -1,0 +1,5 @@
+Simplemente para usarlo ejecute el compilador con algun ejercicio en formato .cz o .txt , por ejemplo:
+
+
+java -jar joincalculus.jar ej5.jcalc
+

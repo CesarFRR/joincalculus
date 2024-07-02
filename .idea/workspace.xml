@@ -4,48 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c15832-5188-4a99-9621-b0d3474f005f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/antlr4/com/unal/JoinCalc.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/InterfaceExpr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/InterfaceStruct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/Node2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/Node3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/Node4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeChannel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeExprArithmetic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeExprBoolean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeFnPrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeFnPrintln.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeIsEmpty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeLeaf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeRandom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeReceive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeSend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeSleep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeSpawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeStructBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeStructContinue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeStructFor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeStructIfElse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeStructWhile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/NodeVar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/AST/TableAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/JoinCalcCustomVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/model/ConsoleWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unal/model/Process.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test.jcalc" afterDir="false" />
+    <list default="true" id="18c15832-5188-4a99-9621-b0d3474f005f" name="Changes" comment="version funcional 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/antlr4/com/unal/JoinCalc.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr4/com/unal/JoinCalc.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unal/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +40,7 @@
     "Application.Main.executor": "Run",
     "Application.com.unal.tests.Main.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.joincalculus [clean,compile...].executor": "Run",
     "Maven.joincalculus [clean].executor": "Run",
     "Maven.joincalculus [compile].executor": "Run",
     "Maven.joincalculus [org.antlr:antlr4-maven-plugin:4.9.2:antlr4].executor": "Run",
@@ -93,7 +57,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -168,8 +132,21 @@
       <workItem from="1719620763678" duration="14444000" />
       <workItem from="1719692297118" duration="32179000" />
       <workItem from="1719789193669" duration="31398000" />
-      <workItem from="1719852183502" duration="49666000" />
+      <workItem from="1719852183502" duration="50028000" />
+      <workItem from="1719939025506" duration="3419000" />
+      <workItem from="1719943038721" duration="47000" />
+      <workItem from="1719943103857" duration="99000" />
+      <workItem from="1719955120523" duration="1816000" />
     </task>
+    <task id="LOCAL-00001" summary="version funcional 1.0">
+      <option name="closed" value="true" />
+      <created>1719906315714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719906315715</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +162,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version funcional 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="version funcional 1.0" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,143 @@
+// Satisfaccón de reglas de Join calculus: recordando el concepto del join calculus, existen reglas para un sector de moleculas que al cumplirse forman átomos, esto se puede relfejar en este lenguaje con el siguiente ejemplo.
+//Hay varias personas haciendo cada uno una tarea, cuando todas acaben sus tareas habrá una persona extra que verificará que las hayan completado y cuando eso pase dará un visto bueno para terminar la jornada laboral e irse todos a casa, pero sucede que las personas estan en varias partes del mundo, cosa que no es problema alguno para las aplicaciones del join calculus en los sistemas concurrentes.
+
+channel P1, P2, P3, P4;
+
+int firstP1 = 0;
+int firstP2 = 0;
+int firstP3 = 0;
+int firstAdmin = 0;
+
+
+process P1 {
+    // secuencia fibonacci
+    if (firstP1 == 0) {
+        firstP1 = 1;
+        int n0 = random(10, 20);
+        println("La persona 1 está haciendo la secuencia fibonacci para los " + n0 + " primeros números..");
+
+        string task1 = " ";
+        int a = 0;
+        int b = 1;
+        int count = 0;
+        task1 =  a + " " + b;
+    }
+
+    if (count < n0) {
+        // se usa wait para simular el modelo de una persona haciendo una tarea
+        int rand = random(500, 1000);
+        wait(rand );
+        int c = a + b;
+        a = b;
+        b = c;
+        task1 = task1 + " " + c;
+        //println (task1 + " <--");
+        count = count + 1;
+    }else{
+        println("La persona 1 ha terminado la secuencia fibonacci..");
+        println (task1);
+        send P1(task1);
+        stop();
+    }
+}
+
+process P2 {
+    int n1 = random(10, 20); // Número de primos a generar
+    int count = 0; // Contador de primos generados
+    int num = 2; // El primer número primo
+    string task2 = "";
+    println("La persona 2 está haciendo la secuencia de los primeros " + n1 + " números primos..");
+    boolean isPrime = false;
+    while (count < n1) {
+
+        if (num<=1){
+            isPrime = false;
+        }else{
+            isPrime = true;
+            for (int i = 2; i < num; i = i + 1) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+
+        if (isPrime) {
+            if (task2 == ""){
+                task2 = num + "";
+            }else{
+                 task2 = task2 + " " + num;
+            }
+            count = count + 1;
+        }
+        num = num + 1;
+        // se usa wait para simular el modelo de una persona haciendo una tarea
+        int rand = random(100, 500);
+        wait(rand );
+    }
+    println("La persona 2 ha terminado de generar los primeros " +n1 +" números primos..");
+    println(task2);
+    send P2(task2);
+    stop();
+}
+
+process P3 {
+    int n2 = random(1, 16) ; // Número para calcular el factorial
+    int factorial = 1; // Valor inicial del factorial
+    string task3 = "";
+
+    println("La persona 3 está haciendo el cálculo del factorial de " + n2 + "..");
+
+    for (int i = 1; i <= n2; i = i + 1) {
+        factorial = factorial * i;
+        // se usa wait para simular el modelo de una persona haciendo una tarea
+        int rand = random(100, 500);
+        wait(rand);
+    }
+
+    task3 = factorial + ""; // Convertir el factorial a string
+    println("La persona 3 ha terminado de calcular el factorial de " +n2 +"..");
+    println("El factorial de " + n2 + " es " + task3);
+    send P3(task3);
+    stop();
+}
+
+process admin {
+    string task1 = "";
+    string task2 = "";
+    string task3 = "";
+
+    if (firstAdmin == 0) {
+        firstAdmin = 1;
+        println("El supervisor está esperando las tareas de las personas..");
+    }
+
+    if ( !(isEmpty(P1)) && !(isEmpty(P2)) && !(isEmpty(P3)) ) {
+        println("El supervisor ha visto los canales llenos..");
+        task1 = receive P1();
+        task2 = receive P2();
+        task3 = receive P3();
+        println("El supervisor ha recibido las tareas de las personas..");
+        println("Tarea 1: " + task1);
+        println("Tarea 2: " + task2);
+        println("Tarea 3: " + task3);
+
+        wait(2000);
+        if( isEmpty(task1) || isEmpty(task2) || isEmpty(task3) ){
+            println("El supervisor ha detectado que una de las tareas no ha sido completada..");
+            stop();
+        }
+        println("El supervisor ha verificado que las tareas han sido completadas..");
+        wait(1000);
+        println("El supervisor da el visto bueno para terminar la jornada laboral..");
+        wait(1000);
+        println("Todos se van a casa..");
+        stop();
+    }
+}
+
+P1.run();
+P2.run();
+P3.run();
+admin.run();

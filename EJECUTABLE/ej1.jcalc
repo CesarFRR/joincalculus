@@ -1,0 +1,27 @@
+//Comunicación entre procesos: Este ejemplo muestra cómo un proceso puede enviar un mensaje a otro proceso a través de un canal.
+
+channel A;
+
+int firstP2 = 0;
+
+process P1 {
+    println("P1 generando mensaje");
+    send A("Hola desde P1");
+    stop();
+}
+
+process P2 {
+    if (firstP2 == 0) {
+        println("P2 esperando mensaje");
+        firstP2 = 1;
+    }
+    if (!isEmpty(A)) {
+        string r = receive A();
+        println("P2 ha recibido el mensaje: " + r);
+        stop();
+    }
+
+}
+
+P1.run();
+P2.run();

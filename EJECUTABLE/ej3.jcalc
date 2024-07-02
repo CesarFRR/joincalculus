@@ -1,0 +1,24 @@
+// Operaciones aritméticas y estructuras de control: Este ejemplo muestra cómo se pueden realizar operaciones aritméticas más complejas y usar estructuras de control adicionales.
+
+process P {
+    int i = 0;
+    while (i < 10) {
+        int square = i ^ 2;
+        int cube = i ^ 3;
+        if (i % 3 == 0) {
+            println(i + " es divisible por 3");
+        } else{
+             if (i % 3 == 1) {
+                println(i + " deja un residuo de 1 cuando se divide por 3");
+            } else {
+                println(i + " deja un residuo de 2 cuando se divide por 3");
+            }
+        }
+        println("El cuadrado de " + i + " es " + square);
+        println("El cubo de " + i + " es " + cube);
+        i = i + 1;
+    }
+    stop();
+}
+
+P.run();

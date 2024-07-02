@@ -1,0 +1,31 @@
+// Sincronización de procesos: Este ejemplo muestra cómo un proceso puede esperar a que otro proceso envíe un mensaje antes de continuar.
+
+channel A;
+int firstP2 = 0;
+
+process P1 {
+    int time = random(1000, 7000);
+    wait(time);
+    send A("Listo");
+    stop();
+}
+
+process P2 {
+    string r = "";
+    if (!isEmpty(A)) {
+        r = receive A();
+    }
+    if (r == "") {
+        if (firstP2 == 0){
+            println("P2 aún no ha recibido el mensaje");
+            firstP2 = 1;
+        }
+    }else {
+        println("P2 ha recibido el mensaje: " + r);
+        stop();
+    }
+
+}
+
+P1.run();
+P2.run();
