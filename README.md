@@ -28,6 +28,7 @@ Para compilar el proyecto, navegue hasta el directorio raíz del proyecto y ejec
 ```bash
 mvn clean package
 ```
+
 Luego ejecute el siguiente comando para crear un archivo jar con todas las dependencias incluidas:
 
 ```bash

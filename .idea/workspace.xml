@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18c15832-5188-4a99-9621-b0d3474f005f" name="Changes" comment="version funcional 2.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="18c15832-5188-4a99-9621-b0d3474f005f" name="Changes" comment="version funcional 2.0 readme actualizado">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +150,7 @@
       <workItem from="1719939025506" duration="3419000" />
       <workItem from="1719943038721" duration="47000" />
       <workItem from="1719943103857" duration="99000" />
-      <workItem from="1719955120523" duration="3017000" />
+      <workItem from="1719955120523" duration="3220000" />
     </task>
     <task id="LOCAL-00001" summary="version funcional 1.0">
       <option name="closed" value="true" />
@@ -177,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719957761099</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="version funcional 2.0 readme actualizado">
+      <option name="closed" value="true" />
+      <created>1719958441775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719958441775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +204,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version funcional 1.0" />
     <MESSAGE value="version funcional 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="version funcional 2.0" />
+    <MESSAGE value="version funcional 2.0 readme actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="version funcional 2.0 readme actualizado" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
